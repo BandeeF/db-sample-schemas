@@ -26,7 +26,40 @@ NAME
   README.txt - ReadMe text file for CO schema
 
 DESCRIPTION
-  CO (Customer Orders) is a sample schema resembling a generic customer orders management schema.
+  Customer Orders (CO) is a sample schema resembling a generic
+  customer orders management schema.
+  The Customer Orders (CO) schema records the details of transactions made by
+  a retail application.
+
+  The CO schema highlights features such as JSON support.
+
+  The company sells a variety of products, which are maintained in the products
+  table. Each product has a unique identification number, name, price, details
+  stored in a JSON object and product image details.
+
+  The orders placed by the customer are tracked in the orders table using the
+  order identification number, date and time when the order was placed,
+  customer details, order status and the store information.
+
+  The details of the products in a particular order are also tracked in the
+  order_items table using the order identification number. Details of the
+  products, price at the time of purchase, quantity and shipment are recorded.
+
+  The information of a customer placing an order is tracked in the customers
+  table. Each customer has an identification number, name, and email address
+  that is used for communication of the orders.
+
+  The customers can purchase the products in stores or online through the
+  company's website. The information for all of the stores and their
+  corresponding physical and virtual addresses is tracked in the stores
+  table. The store information is also recorded in the order details.
+
+  The shipment details of the orders placed such as the delivery address,
+  customer details, store information and the shipment status are stored
+  in the shipments table.
+
+  An inventory table stores the details of each product such as the quantity
+  available at each store.
 
 SCHEMA VERSION
   21
