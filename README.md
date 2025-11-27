@@ -82,6 +82,23 @@ This project is not accepting external contributions at this time. For bugs or e
 
 Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process.
 
+## Performance plotter tool
+
+The `tools/performance_plotter.py` script uses `pidstat` to gather CPU and memory samples for a target process (or all processes) and produces an HTML report with simple line charts.
+
+### Usage
+
+```
+python3 tools/performance_plotter.py [--pid <PID>] [--interval 1] [--count 5] [--output pidstat_report.html]
+```
+
+* `--pid`: PID to sample. If omitted, `pidstat` will monitor all processes.
+* `--interval`: Sampling interval in seconds (default: 1).
+* `--count`: Number of samples to collect (default: 5).
+* `--output`: Where to save the generated HTML report (default: `pidstat_report.html`).
+
+The report includes inline Chart.js plots for CPU and memory usage plus the raw `pidstat` output for reference. Ensure `pidstat` (usually from the `sysstat` package) is installed and accessible on your system before running the script.
+
 ## License
 
 ```
